@@ -21,5 +21,4 @@ script:
   | wc -l);        fi
 services:
 - mongodb
-- riak
 sudo: false
