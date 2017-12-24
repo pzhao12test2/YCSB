@@ -1,3 +1,7 @@
+addons:
+  hostname: myshorthost
+  hosts:
+  - myshorthost
 before_install:
 - if [ "$TRAVIS_OS_NAME" == "osx" ];        then sed -i '' 's/<gib.enabled>true/<gib.enabled>false/'
   $TRAVIS_BUILD_DIR/pom.xml;        else sed -i 's/<gib.enabled>true/<gib.enabled>false/'
@@ -21,4 +25,4 @@ script:
   | wc -l);        fi
 services:
 - mongodb
-sudo: false
+sudo: true
